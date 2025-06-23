@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Administración de Cursos con Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="container">
+
+    <!-- Login -->
+    <div id="loginDiv">
+      <h1>Iniciar Sesión</h1>
+      <label for="userInput">Usuario</label>
+      <input type="text" id="userInput" placeholder="Usuario" autocomplete="off" />
+      <label for="passInput">Contraseña</label>
+      <input type="password" id="passInput" placeholder="Contraseña" autocomplete="off" />
+      <button onclick="login()">Entrar</button>
+    </div>
+
+    <!-- Sistema (oculto hasta login) -->
+    <div id="sistemaDiv" style="display:none;">
+      <h1>Administración de Cursos</h1>
+      <form id="formSistema" onsubmit="event.preventDefault(); guardar();">
+        <input type="text" id="studentName" placeholder="Nombre del estudiante" autocomplete="off" />
+        <input type="text" id="courseName" placeholder="Nombre del curso" autocomplete="off" />
+        <input type="text" id="examName" placeholder="Nombre del examen" autocomplete="off" />
+        <input type="number" id="examGrade" placeholder="Calificación (0-100)" min="0" max="100" />
+        <button type="submit">Guardar</button>
+      </form>
+      <div id="resultado"></div>
+    </div>
+
+  </div>
+
+<script src="script.js">
+
+</script>
+
+</body>
+</html>
